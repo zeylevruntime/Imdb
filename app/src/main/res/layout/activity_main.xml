@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/pullToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/toolbar1" />
+            <RelativeLayout
+                android:layout_marginTop="70dp"
+                android:layout_below="@+id/title"
+                android:id="@+id/button_toolbar"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="3dp"
+                    app:cardUseCompatPadding="true">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:gravity="center_vertical"
+                            android:padding="2dp"
+                            android:inputType="text"
+                            android:imeOptions="actionDone"
+                            android:singleLine="true"
+                            android:textSize="14dp"
+                            android:cursorVisible="true"
+                            android:fontFamily="@font/hedley_medium"
+                            android:id="@+id/et_search"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/bt_search"
+                            android:hint="@string/search_film"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+                        <ImageView
+                            android:id="@+id/bt_search"
+                            android:layout_toLeftOf="@+id/bt_filter"
+                            android:src="@mipmap/as_search"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp" />
+                        <ImageView
+                            android:id="@+id/bt_filter"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/as_sort"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+
+            </RelativeLayout>
+            <android.support.design.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_below="@+id/button_toolbar"
+                android:layout_height="match_parent"
+                android:layout_above="@id/footer"
+                android:layout_marginTop="10dp"
+                >
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_mycard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </android.support.v7.widget.RecyclerView>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab"
+                    android:backgroundTint="#0091ff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="16dp"
+                    app:srcCompat="@drawable/as_up" />
+
+            </android.support.design.widget.CoordinatorLayout>
+
+
+            <ProgressBar
+                android:id="@+id/footer"
+                android:visibility="gone"
+                android:indeterminateTint="@color/colorAccent1"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:id="@+id/empty"
+                android:layout_below="@+id/toolbar1"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:src="@drawable/empty"
+                    android:layout_gravity="center"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp" />
+                <TextView
+                    android:textSize="25dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/color_tab_2"
+                    android:text="@string/not_found"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/colorAccent1"
+        />
+
+
+</RelativeLayout>

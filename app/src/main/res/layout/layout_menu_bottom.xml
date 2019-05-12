@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black_overlay"
+    android:backgroundTint="@color/black_overlay"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="6dp"
+        app:cardUseCompatPadding="true">
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_title"
+                android:paddingBottom="10dp"
+                android:paddingTop="15dp"
+                android:layout_toLeftOf="@id/close"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingLeft="15dp"
+                android:textSize="12sp"
+                android:layout_marginRight="15dp"
+                android:text="Filter By"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/close"
+                android:paddingBottom="10dp"
+                android:paddingTop="15dp"
+                android:paddingRight="25dp"
+                android:paddingLeft="25dp"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/times_circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_below="@+id/tv_title"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:paddingTop="5dp"
+                    android:paddingBottom="15dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Type"
+                        android:paddingBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <RadioButton
+                        android:id="@+id/def"
+                        android:textSize="12sp"
+                        android:buttonTint="@color/blue_sky"
+                        android:fontFamily="@font/hedley_regular"
+                        android:text="Default (Kosong)"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <RadioButton
+                        android:id="@+id/movie"
+                        android:textSize="12sp"
+                        android:buttonTint="@color/blue_sky"
+                        android:fontFamily="@font/hedley_regular"
+                        android:text="Movie"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <RadioButton
+                        android:id="@+id/series"
+                        android:textSize="12sp"
+                        android:buttonTint="@color/blue_sky"
+                        android:text="Series"
+                        android:fontFamily="@font/hedley_regular"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <RadioButton
+                        android:id="@+id/episode"
+                        android:textSize="12sp"
+                        android:buttonTint="@color/blue_sky"
+                        android:text="Episode"
+                        android:fontFamily="@font/hedley_regular"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:text="Year"
+                        android:paddingBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/et_year"
+                        android:hint="Select Year"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/set"
+                        android:text="Set"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/blue_sky"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

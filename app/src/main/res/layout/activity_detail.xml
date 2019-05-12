@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+    <include layout="@layout/toolbar1" />
+    <LinearLayout
+        android:id="@+id/empty"
+        android:layout_below="@+id/toolbar1"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:src="@drawable/empty"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="300dp" />
+        <TextView
+            android:textSize="35dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/color_tab_2"
+            android:text="@string/not_found"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_below="@id/toolbar1"
+        android:id="@+id/pullToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/utama"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <android.support.v7.widget.CardView
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="3dp"
+                    app:cardUseCompatPadding="true">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:id="@+id/poster"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                        <ProgressBar
+                            android:id="@+id/pb"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:indeterminateTint="@color/colorAccent1"
+                            />
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Title"
+                        android:fontFamily="@font/poppins_bold"
+                        android:paddingRight="15dp"
+                        android:gravity="right"
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/Mtitle"
+                        android:text="title"
+                        android:layout_marginRight="8dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Year"
+                        android:fontFamily="@font/poppins_bold"
+                        android:paddingRight="15dp"
+                        android:gravity="right"
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/year"
+                        android:text="year"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_weight="1"
+                        android:layout_marginRight="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Released"
+                        android:fontFamily="@font/poppins_bold"
+                        android:paddingRight="15dp"
+                        android:gravity="right"
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/released"
+                        android:text="released"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_weight="1"
+                        android:layout_marginRight="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Runtime"
+                        android:fontFamily="@font/poppins_bold"
+                        android:paddingRight="15dp"
+                        android:gravity="right"
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/runtime"
+                        android:text="runtime"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_weight="1"
+                        android:layout_marginRight="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Genre"
+                        android:fontFamily="@font/poppins_bold"
+                        android:paddingRight="15dp"
+                        android:gravity="right"
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/genre"
+                        android:text="genre"
+                        android:layout_marginRight="8dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Director"
+                        android:fontFamily="@font/poppins_bold"
+                        android:paddingRight="15dp"
+                        android:gravity="right"
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/director"
+                        android:text="director"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_weight="1"
+                        android:layout_marginRight="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Writer"
+                        android:fontFamily="@font/poppins_bold"
+                        android:paddingRight="15dp"
+                        android:gravity="right"
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/writer"
+                        android:text="writer"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_weight="1"
+                        android:layout_marginRight="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Actors"
+                        android:fontFamily="@font/poppins_bold"
+                        android:paddingRight="15dp"
+                        android:gravity="right"
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/actors"
+                        android:text="actors"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_weight="1"
+                        android:layout_marginRight="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Plot"
+                        android:fontFamily="@font/poppins_bold"
+                        android:paddingRight="15dp"
+                        android:gravity="right"
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/plot"
+                        android:text="plot"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_weight="1"
+                        android:layout_marginRight="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Country"
+                        android:fontFamily="@font/poppins_bold"
+                        android:paddingRight="15dp"
+                        android:gravity="right"
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/country"
+                        android:text="country"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_weight="1"
+                        android:layout_marginRight="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Awards"
+                        android:fontFamily="@font/poppins_bold"
+                        android:paddingRight="15dp"
+                        android:gravity="right"
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/awards"
+                        android:text="awards"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_weight="1"
+                        android:layout_marginRight="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Type"
+                        android:fontFamily="@font/poppins_bold"
+                        android:paddingRight="15dp"
+                        android:gravity="right"
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/type"
+                        android:text="type"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_weight="1"
+                        android:layout_marginRight="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="BoxOffice"
+                        android:fontFamily="@font/poppins_bold"
+                        android:paddingRight="15dp"
+                        android:gravity="right"
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/boxOffice"
+                        android:text="boxOffice"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_weight="1"
+                        android:layout_marginRight="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Production"
+                        android:fontFamily="@font/poppins_bold"
+                        android:paddingRight="15dp"
+                        android:gravity="right"
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/production"
+                        android:text="production"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_weight="1"
+                        android:layout_marginRight="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Website"
+                        android:fontFamily="@font/poppins_bold"
+                        android:paddingRight="15dp"
+                        android:gravity="right"
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/website"
+                        android:text="website"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_weight="1"
+                        android:layout_marginRight="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="IMDB Rating"
+                        android:fontFamily="@font/poppins_bold"
+                        android:paddingRight="15dp"
+                        android:gravity="right"
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/imdbRating"
+                        android:text="imdbRating"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_weight="1"
+                        android:layout_marginRight="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="IMDB Votes"
+                        android:fontFamily="@font/poppins_bold"
+                        android:paddingRight="15dp"
+                        android:gravity="right"
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/imdbVotes"
+                        android:text="imdbVotes"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_weight="1"
+                        android:layout_marginRight="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <!--<ProgressBar-->
+        <!--android:id="@+id/pb"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="70dp"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:indeterminateTint="@color/colorAccent1"-->
+        <!--/>-->
+
+
+</RelativeLayout>
