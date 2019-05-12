@@ -58,6 +58,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                     <RadioButton
+                        android:layout_marginLeft="10dp"
                         android:id="@+id/def"
                         android:textSize="12sp"
                         android:buttonTint="@color/blue_sky"
@@ -68,6 +69,7 @@
                         android:layout_height="wrap_content" />
                     <RadioButton
                         android:id="@+id/movie"
+                        android:layout_marginLeft="10dp"
                         android:textSize="12sp"
                         android:buttonTint="@color/blue_sky"
                         android:fontFamily="@font/hedley_regular"
@@ -77,6 +79,7 @@
                         android:layout_height="wrap_content" />
                     <RadioButton
                         android:id="@+id/series"
+                        android:layout_marginLeft="10dp"
                         android:textSize="12sp"
                         android:buttonTint="@color/blue_sky"
                         android:text="Series"
@@ -87,6 +90,7 @@
                         android:layout_height="wrap_content" />
                     <RadioButton
                         android:id="@+id/episode"
+                        android:layout_marginLeft="10dp"
                         android:textSize="12sp"
                         android:buttonTint="@color/blue_sky"
                         android:text="Episode"

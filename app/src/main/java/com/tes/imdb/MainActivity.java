@@ -251,13 +251,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         BottomSheetDialog dialog = new BottomSheetDialog(MainActivity.this);
 
         public DialogMenu(MainActivity context) {
-
+            ImageView close;
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
             dialog.setContentView(R.layout.layout_menu_bottom);
             dialog.getWindow().setGravity(Gravity.BOTTOM);
             dialog.setCancelable(true);
             dialog.setCanceledOnTouchOutside(true);
             dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            close= dialog.findViewById(R.id.close);
             def= dialog.findViewById(R.id.def);
             movie= dialog.findViewById(R.id.movie);
             series= dialog.findViewById(R.id.series);
@@ -265,6 +266,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             et_year= dialog.findViewById(R.id.et_year);
             set= dialog.findViewById(R.id.set);
             et_year.setOnClickListener(this);
+            close.setOnClickListener(this);
             def.setOnClickListener(this);
             set.setOnClickListener(this);
             movie.setOnClickListener(this);
@@ -311,6 +313,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     break;
                 case R.id.et_year :
                     showYearDialog();
+                    break;
+                case R.id.close :
+                    dialog.dismiss();
                     break;
                 case R.id.set :
                     page=1;
